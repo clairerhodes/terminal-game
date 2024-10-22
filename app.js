@@ -1,4 +1,6 @@
-// castle battle game :D
+
+       
+        // castle battle game :D
 // by: claire rhodes, justin strohsnitter, & angel gerena vazquez
 
 // let user input custom name & be able to reference custom name throughout game
@@ -18,14 +20,16 @@ const game = {
         let peon = {peonUsername: name, job: `nothing`};
         // console.log(peon); check that you're getting {peonUsername: name, job: `nothing`}
         game.barracks.push(peon) // push each peon into your barracks
-    }
+    },
+    
 }
 const selectPeon = (peonName) => {
     let matchedPeon
     game.barracks.forEach((peon) => {
         if (peonName.toLowerCase() === peon.peonUsername.toLowerCase()){
             console.log(peon) //for reference
-            matchedPeon = peon // access peon outside of forEach, can use find command but idfk what find is yet (ty glenn)
+            matchedPeon = peon
+             // access peon outside of forEach, can use find command but idfk what find is yet (ty glenn)
         }
     })
     // ACTION ITEM: how to change job from nothing to either repair or attack
@@ -51,12 +55,34 @@ console.log(`Do you want to "create" a peon or "select" a peon? `);
         })
         const peonSelection = prompt (peonPrompt);
         selectPeon(peonSelection)
+    /*    I tried to make a function when the peon was selected the other
+    other option would be to select if the actio would be
+    repair or attack but did not succeed to conect this function
+    with the rest of the program
+    */
+         {
+            peonSelection = assignJob
+    const  assignJob: (peon) => {
+         action = prompt('do you want to attack or do you want to repair?')
+        if (action === 'attack'){
+            peon.job = 'attack';
+            console.log(`${peonName} is now set to attack`);
+        } else if (action === 'repair'){
+            peon.job = 'repair'
+            console.log(`${peonName} is now set to repair`)
+        } else {
+            console.log('Invalid action. Job Remains unchanged')
+        }
+        console.log(
+        }
         /// ACTION ITEM: choose what action peon should perform
         // if( === `attack`){
 
         // } else( === `repair`){
 
         // }
+    }
+    )
     }
 }
 createSelectPeonOption()
@@ -83,3 +109,5 @@ createSelectPeonOption()
         - if player has <= 0 points, cpu wins
         - if both have 0 or <= 0 points, its a tie
         - if both > 0 hit points, start player's turn over again (go back to step 1)
+        */
+       
