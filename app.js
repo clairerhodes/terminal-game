@@ -1,4 +1,6 @@
-// castle battle game :D
+
+       
+        // castle battle game :D
 // by: claire rhodes, justin strohsnitter, & angel gerena vazquez
 // let user input custom name & be able to reference custom name throughout game
 let humanHp = 10 //10/22 JS added this to establish a variable that can change for hit points for human
@@ -50,10 +52,35 @@ console.log(`Do you want to "create" a peon or "select" a peon? `);
         })
         const peonSelection = prompt (peonPrompt);
         selectPeon(peonSelection)
+
+    /*    I tried to make a function when the peon was selected the other
+    other option would be to select if the actio would be
+    repair or attack but did not succeed to conect this function
+    with the rest of the program
+    */
+         {
+            peonSelection = assignJob
+    const  assignJob: (peon) => {
+         action = prompt('do you want to attack or do you want to repair?')
+        if (action === 'attack'){
+            peon.job = 'attack';
+            console.log(`${peonName} is now set to attack`);
+        } else if (action === 'repair'){
+            peon.job = 'repair'
+            console.log(`${peonName} is now set to repair`)
+        } else {
+            console.log('Invalid action. Job Remains unchanged')
+        }
+        console.log(
+        }
         /// ACTION ITEM: choose what action peon should perform
         // if( === `attack`){
+
         // } else( === `repair`){
+
         // }
+    }
+    )
     }
 }
 createSelectPeonOption()
@@ -66,10 +93,10 @@ game.barracks.forEach(barrack => { // 10/22 JS function will loop through the ba
     computerHp -- // 10/22 JS the computer's HP will decrease by 1
 }
 })
-console.log(`"Your HP is" ${humanHp}`) // 10/22 JS Will display user's HP after a turn
-console.log(`"The computer's HP" ${computerHp}`) // 10/22 JSWill display computer's HP after a turn
+
 
 // ================ FLOW OF GAME #3 ============
+
 
 function randomHitPoints(min, max){ // From Claire 10/22 JS this function generates a random amount of Hit Points to repair or damage based on min and max constraints
                 return math.floor(math.random(min - max)+1)} // From Claire 10/22 JS this
